@@ -1,0 +1,379 @@
+@import url('https://raw.githubusercontent.com/aaronmansfield5/aaronmansfield5.github.io/main/fonts/theme.css');
+
+:root {
+    font-family: 'SF Pro', system-ui !important;
+    font-stretch: expanded;
+    --bg-color: #0d1117;
+    --header-color: #161b22;
+    --search-bar-color: #0d1117;
+    --search-bar-border-color: #30363d;
+    --text-color-rgb: rgb(255, 255, 255);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color-rgb);
+}
+
+div.locked {
+    position: fixed;
+    inset: 0 0 auto;
+    background-color: var(--header-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 15px;
+    height: 3rem;
+}
+
+div.title-data {
+    margin-left: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+label.search {
+    margin-left: 12px;
+    background-color: var(--search-bar-color);
+    border-color: var(--search-bar-border-color);
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 1px;
+    outline: 0;
+    height: 20px;
+    resize: none;
+    min-width: 200px;
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+
+input.search {
+    background-color: transparent;
+    border: none;
+    width: clamp(140px, 180px, 220px);
+    outline: 0;
+    color: var(--text-color-rgb);
+    font-family: 'SF Pro', system-ui !important;
+    font-size: smaller;
+    font-weight: 350;
+    font-stretch: expanded;
+    margin-left: 5px;
+    transition: all 300ms ease-in-out;
+}
+
+input.search:focus {
+    width: clamp(220px, 350px, 450px);
+}
+
+svg.logo {
+    max-width: 30px;
+    height: auto;
+    cursor: pointer;
+    transition: all 0.15s linear;
+    fill: var(--text-color-rgb);
+    margin-top: 5px;
+}
+
+svg.logo:hover {
+    filter: opacity(0.7);
+}
+
+label.header-lbl {
+    background-color: transparent;
+    border: none;
+    font-weight: 700;
+    font-size: small;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin-left: auto;
+    padding-right: 55px;
+}
+
+button.header-btn {
+    font-family: 'SF Pro', system-ui !important;
+    font-weight: 300;
+    font-stretch: expanded;
+    color: var(--text-color-rgb);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.15s linear;
+}
+
+button.header-btn:hover {
+    opacity: 0.7;
+}
+
+div.profile-info {
+    position: fixed;
+    margin-top: 48px;
+    background-color: var(--header-color);
+    width: clamp(100px, 23%, 250px);
+    inset: 0 0 0;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+img.profile-pic {
+    max-width: 70%;
+    border-radius: 100px;
+}
+
+label.name {
+    padding-top: 10px;
+    font-size: larger;
+    font-weight: 550;
+    opacity: 0.85;
+    cursor: text;
+    align-self: flex-start;
+    padding-left: 12.5%;
+}
+
+label.username {
+    padding-bottom: 5px;
+    font-weight: 350;
+    opacity: 0.7;
+    cursor: text;
+    align-self: flex-start;
+    padding-left: 12.5%;
+}
+
+div.bio {
+    font-size: smaller;
+    font-weight: 350;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 12.5%;
+    opacity: 0.95;
+    cursor: text;
+    font-family: 'SF Pro', system-ui !important;
+}
+
+div.about-me {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+div.divider {
+    border-top: 0.5px solid hsla(0, 0%, 100%, 0.478);
+    border-bottom: 0.5px solid hsla(0, 0%, 100%, 0.478);
+    width: 95%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+label.section-title {
+    margin-bottom: 5px;
+    font-weight: 550;
+}
+
+div.social-media {
+    gap: 4px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+div.code-languages {
+    gap: 4px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+main {
+    margin-left: clamp(100px, 23%, 250px);
+    margin-top: 48px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    text-align: center;
+}
+
+main > div {
+    margin-top: 20px;
+}
+
+.repos {
+    margin-top: 8px;
+    gap: 8px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    column-count: 3;
+}
+
+.repos > div {
+    border-color: #30363d;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    width: clamp(225px, 10%, 400px);
+}
+
+.npms {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    gap: 8px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    column-count: 3;
+}
+
+.npms > div {
+    border-color: #30363d;
+    border-radius: 6px;
+    border-style: solid;
+    border-width: 1px;
+    width: clamp(225px, 10%, 400px);
+}
+
+.git-repo-example {
+    visibility: hidden;
+    position: absolute;
+}
+
+.repo-title {
+    text-transform: capitalize;
+}
+
+.repo-icon {
+    fill: hsl(0, 0%, 100%);
+}
+
+.repo-url {
+    display: flex;
+    align-items: center;
+    color: #3f84e4;
+    text-decoration: none;
+    padding-left: 7px;
+    margin-left: 4px;
+    padding-top: 9px;
+    font-size: 12px;
+    padding-bottom: 8px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.repo-url > label {
+    cursor: pointer;
+    padding-bottom: 4px;
+}
+
+.repo-url:hover {
+    text-decoration: underline;
+}
+
+.repo-desc {
+    color: #949da6 !important;
+    font-size: 10px;
+    font-weight: 475;
+    margin-left: clamp(14px, 5%, 18px);
+    margin-right: 18px;
+    padding-bottom: 5px;
+    text-align: left;
+    word-wrap: break-word;
+}
+
+.repo-link {
+    color: #586069 !important;
+    font-size: 10px;
+    font-weight: 350;
+    margin-left: clamp(14px, 5%, 18px);
+    margin-right: 15px;
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.repo-data {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding-bottom: 5px;
+    margin-left: clamp(14px, 5%, 18px);
+}
+
+.repo-lang {
+    color:hsl(0, 0%, 100%);
+    font-size: x-small;
+    margin-right: auto;
+}
+
+.repo-stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: x-small;
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+}
+
+.repo-forks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 20px;
+    cursor: pointer;
+    font-size: x-small;
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+}
+
+.npm-downloads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: x-small;
+    text-decoration: none;
+    color:hsl(0, 0%, 100%);
+    visibility: hidden;
+}
+
+.npm-downloads > .npm-download-count {
+    margin-left: 3px;
+}
+
+.npm-downloads:hover {
+    text-decoration: underline;
+    color: #3f84e4;
+}
+
+.repo-stars:hover {
+    text-decoration: underline;
+    color: #3f84e4;
+}
+
+.repo-forks:hover {
+    text-decoration: underline;
+    color: #3f84e4;
+}
+
+a > label {
+    cursor: pointer;
+}
+
+.repo-data > a > svg {
+    fill: white;
+}
